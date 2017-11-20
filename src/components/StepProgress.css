@@ -1,0 +1,73 @@
+.uiSteps {
+	list-style: none;
+    padding-top: 20px;
+    width: 1024px;
+    margin: 0 auto;    
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+}
+
+.uiSteps .uiStep {
+    display: inline-block;
+    cursor: pointer;
+    flex: 1;
+    position: relative;
+}
+
+.uiSteps .uiStep:before{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #c6c5c5;
+    position: absolute;
+    top: 36px;
+    left: -16px;
+}
+
+.uiSteps .uiStep:first-child {
+    flex: 0;
+}
+
+.uiSteps .uiStep:first-child:before{
+    display: none;
+}
+
+.uiSteps .uiStep.-done:before{
+    background-color: #5125db;
+}
+
+.uiSteps .uiStep .uiStepTextContainer {
+    float: right;
+}
+
+.uiSteps .uiStep .uiStepTextContainer:after { 
+    content: '';
+    display: inline-block;
+    margin-top: 8px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 4px solid #c6c5c5;
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.uiSteps .uiStep.-done .uiStepTextContainer:after {
+    display: inline-block;
+    border: 4px solid #5125db;
+    cursor: pointer;
+}
+
+.uiSteps .uiStep .uiStepTextContainer .uiStepText {
+    text-align: right;
+    font-weight: bold;  
+    color: #c6c5c5;
+}
+
+.uiSteps .uiStep.-done .uiStepTextContainer .uiStepText {
+    color: #5125db;
+}
